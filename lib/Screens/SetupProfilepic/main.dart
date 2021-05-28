@@ -1,16 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:hexcolor/hexcolor.dart';
+
 import 'package:phuble/Themes/TypoGraphy.dart';
 
-class SignupChangePassword extends StatefulWidget {
+class SetupProfilepic extends StatefulWidget {
   @override
-  _SignupChangePasswordState createState() => _SignupChangePasswordState();
+  _SetupProfilepicState createState() => _SetupProfilepicState();
 }
 
-class _SignupChangePasswordState extends State<SignupChangePassword> {
+class _SetupProfilepicState extends State<SetupProfilepic> {
   bool hiddenPassword = true;
+  bool checkBox = false;
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
@@ -46,7 +50,7 @@ class _SignupChangePasswordState extends State<SignupChangePassword> {
               Padding(
                 padding: const EdgeInsets.only(top: 40.0),
                 child: Text(
-                  "You'll need a password",
+                  "Pick a profile picture",
                   style: TextConfig.title1,
                 ),
               ),
@@ -54,49 +58,40 @@ class _SignupChangePasswordState extends State<SignupChangePassword> {
                 height: 10,
               ),
               Text(
-                "Make sure it's 8 characters or more",
+                "Have a favorite selfie? Upload it now",
                 style: TextConfig.body1,
               ),
               SizedBox(
                 height: 50,
               ),
-              TextFormField(
-                obscureText: hiddenPassword,
-                style: TextConfig.textInput,
-                keyboardType: TextInputType.name,
-                validator: (input) =>
-                    input.length < 3 ? "Please enter the password" : null,
-                decoration: InputDecoration(
-                  hintText: "Password",
-                  hintStyle: TextConfig.textInput,
-                  errorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: ColorConfig.errorColor,
-                      ),
-                      borderRadius: BorderRadius.circular(5)),
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: ColorConfig.bodytext),
-                      borderRadius: BorderRadius.circular(5)),
-                  enabledBorder: new OutlineInputBorder(
-                    borderRadius: new BorderRadius.circular(5),
-                    borderSide: BorderSide(
-                      color: ColorConfig.bodytext,
+              Center(
+                child: InkWell(
+                  onTap: () {},
+                  child: Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 2,
+                          color: ColorConfig.bodytext,
+                        ),
+                        borderRadius: BorderRadius.circular(5)),
+                    height: 100,
+                    width: 100,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          MaterialIcons.insert_photo,
+                          size: 30,
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "Upload",
+                          style: TextConfig.body1,
+                        ),
+                      ],
                     ),
-                  ),
-                  suffixIcon: IconButton(
-                    color: ColorConfig.bodytext,
-                    icon: Icon(
-                      hiddenPassword ? Icons.visibility_off : Icons.visibility,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        if (hiddenPassword) {
-                          hiddenPassword = false;
-                        } else {
-                          hiddenPassword = true;
-                        }
-                      });
-                    },
                   ),
                 ),
               ),
@@ -120,11 +115,11 @@ class _SignupChangePasswordState extends State<SignupChangePassword> {
                     // Navigator.push(
                     //     context,
                     //     MaterialPageRoute(
-                    //         builder: (context) => ResetPassword()));
+                    //         builder: (context) => UserBanned()));
                   },
                   child: Center(
                     child: Text(
-                      "Contine",
+                      "Next",
                       style: TextConfig.button,
                     ),
                   ),

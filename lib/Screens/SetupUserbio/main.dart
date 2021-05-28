@@ -4,13 +4,12 @@ import 'package:flutter/services.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:phuble/Themes/TypoGraphy.dart';
 
-class SignupChangePassword extends StatefulWidget {
+class SetupUserbio extends StatefulWidget {
   @override
-  _SignupChangePasswordState createState() => _SignupChangePasswordState();
+  _SetupUserbioState createState() => _SetupUserbioState();
 }
 
-class _SignupChangePasswordState extends State<SignupChangePassword> {
-  bool hiddenPassword = true;
+class _SetupUserbioState extends State<SetupUserbio> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
@@ -46,7 +45,7 @@ class _SignupChangePasswordState extends State<SignupChangePassword> {
               Padding(
                 padding: const EdgeInsets.only(top: 40.0),
                 child: Text(
-                  "You'll need a password",
+                  "Describe yourself",
                   style: TextConfig.title1,
                 ),
               ),
@@ -54,26 +53,20 @@ class _SignupChangePasswordState extends State<SignupChangePassword> {
                 height: 10,
               ),
               Text(
-                "Make sure it's 8 characters or more",
+                "What makes you special? Don't think so hard, just have fun with it",
                 style: TextConfig.body1,
               ),
               SizedBox(
                 height: 50,
               ),
               TextFormField(
-                obscureText: hiddenPassword,
+                maxLength: 160,
+                maxLines: 10,
                 style: TextConfig.textInput,
                 keyboardType: TextInputType.name,
-                validator: (input) =>
-                    input.length < 3 ? "Please enter the password" : null,
                 decoration: InputDecoration(
-                  hintText: "Password",
+                  hintText: "Your bio",
                   hintStyle: TextConfig.textInput,
-                  errorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: ColorConfig.errorColor,
-                      ),
-                      borderRadius: BorderRadius.circular(5)),
                   focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: ColorConfig.bodytext),
                       borderRadius: BorderRadius.circular(5)),
@@ -82,21 +75,6 @@ class _SignupChangePasswordState extends State<SignupChangePassword> {
                     borderSide: BorderSide(
                       color: ColorConfig.bodytext,
                     ),
-                  ),
-                  suffixIcon: IconButton(
-                    color: ColorConfig.bodytext,
-                    icon: Icon(
-                      hiddenPassword ? Icons.visibility_off : Icons.visibility,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        if (hiddenPassword) {
-                          hiddenPassword = false;
-                        } else {
-                          hiddenPassword = true;
-                        }
-                      });
-                    },
                   ),
                 ),
               ),
@@ -124,7 +102,7 @@ class _SignupChangePasswordState extends State<SignupChangePassword> {
                   },
                   child: Center(
                     child: Text(
-                      "Contine",
+                      "Next",
                       style: TextConfig.button,
                     ),
                   ),

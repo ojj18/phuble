@@ -32,9 +32,11 @@ dependencies:
   community_material_icon: ^5.4.55
   octicons_icon: ^0.0.2
   outline_material_icons: ^0.1.1
+  fluttericon: ^2.0.0
   line_awesome_flutter: ^1.0.1
   hexcolor: ^1.0.6
   flutter_statusbarcolor_ns: ^0.3.0-nullsafety
+  readmore: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +57,11 @@ flutter:
   assets:
     - assets/images/
     - assets/json/stock.json
+    - assets/json/post.json
+    - assets/json/share.json
+    - assets/json/Liked.json
+    - assets/json/disliked.json
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

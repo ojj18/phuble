@@ -4,13 +4,12 @@ import 'package:flutter/services.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:phuble/Themes/TypoGraphy.dart';
 
-class SignupChangePassword extends StatefulWidget {
+class SetupUsername extends StatefulWidget {
   @override
-  _SignupChangePasswordState createState() => _SignupChangePasswordState();
+  _SetupUsernameState createState() => _SetupUsernameState();
 }
 
-class _SignupChangePasswordState extends State<SignupChangePassword> {
-  bool hiddenPassword = true;
+class _SetupUsernameState extends State<SetupUsername> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
@@ -46,7 +45,7 @@ class _SignupChangePasswordState extends State<SignupChangePassword> {
               Padding(
                 padding: const EdgeInsets.only(top: 40.0),
                 child: Text(
-                  "You'll need a password",
+                  "Choose a username",
                   style: TextConfig.title1,
                 ),
               ),
@@ -54,26 +53,18 @@ class _SignupChangePasswordState extends State<SignupChangePassword> {
                 height: 10,
               ),
               Text(
-                "Make sure it's 8 characters or more",
+                "Your @username is unique, You can change it later.",
                 style: TextConfig.body1,
               ),
               SizedBox(
                 height: 50,
               ),
               TextFormField(
-                obscureText: hiddenPassword,
                 style: TextConfig.textInput,
                 keyboardType: TextInputType.name,
-                validator: (input) =>
-                    input.length < 3 ? "Please enter the password" : null,
                 decoration: InputDecoration(
-                  hintText: "Password",
+                  hintText: "@mohamedhana",
                   hintStyle: TextConfig.textInput,
-                  errorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: ColorConfig.errorColor,
-                      ),
-                      borderRadius: BorderRadius.circular(5)),
                   focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: ColorConfig.bodytext),
                       borderRadius: BorderRadius.circular(5)),
@@ -83,22 +74,30 @@ class _SignupChangePasswordState extends State<SignupChangePassword> {
                       color: ColorConfig.bodytext,
                     ),
                   ),
-                  suffixIcon: IconButton(
-                    color: ColorConfig.bodytext,
-                    icon: Icon(
-                      hiddenPassword ? Icons.visibility_off : Icons.visibility,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        if (hiddenPassword) {
-                          hiddenPassword = false;
-                        } else {
-                          hiddenPassword = true;
-                        }
-                      });
-                    },
-                  ),
                 ),
+              ),
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        "@mohamedhana1",
+                        style: TextConfig.body1,
+                      ),
+                      SizedBox(width: 10),
+                      Text(
+                        "@mohamedhana2",
+                        style: TextConfig.body1,
+                      ),
+                    ],
+                  ),
+                  Text(
+                    "16",
+                    style: TextConfig.body1,
+                  ),
+                ],
               ),
               SizedBox(height: 50),
               Container(
@@ -124,7 +123,7 @@ class _SignupChangePasswordState extends State<SignupChangePassword> {
                   },
                   child: Center(
                     child: Text(
-                      "Contine",
+                      "Next",
                       style: TextConfig.button,
                     ),
                   ),

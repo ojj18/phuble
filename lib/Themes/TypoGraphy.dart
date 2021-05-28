@@ -31,6 +31,10 @@ class TextConfig {
       fontFamily: FontConfig.bold,
       fontSize: Sizeconfig.huge,
       color: ColorConfig.primarycolor);
+  static TextStyle head1 = TextStyle(
+      fontFamily: FontConfig.bold,
+      fontSize: Sizeconfig.huge,
+      color: ColorConfig.bodytext);
 
   static TextStyle body = TextStyle(
       fontFamily: FontConfig.regular,
@@ -48,6 +52,14 @@ class TextConfig {
       fontFamily: FontConfig.regular,
       fontSize: Sizeconfig.small,
       color: ColorConfig.bodytext);
+  static TextStyle body4 = TextStyle(
+      fontFamily: FontConfig.regular,
+      fontSize: Sizeconfig.huge,
+      color: Colors.grey);
+  static TextStyle body5 = TextStyle(
+      fontFamily: FontConfig.regular,
+      fontSize: Sizeconfig.small,
+      color: Colors.grey);
   static TextStyle title1 = TextStyle(
       fontFamily: FontConfig.bold,
       fontSize: Sizeconfig.higantic,
@@ -64,4 +76,8 @@ class TextConfig {
       fontFamily: FontConfig.regular,
       fontSize: Sizeconfig.large,
       color: Colors.white);
+  static TextStyle liketext = TextStyle(
+      fontFamily: FontConfig.regular,
+      fontSize: Sizeconfig.compact,
+      color: Colors.grey);
 }
