@@ -93,13 +93,13 @@ class _SignInState extends State<SignIn> {
                           borderRadius: BorderRadius.circular(5)),
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: ColorConfig.primarycolor,
+                            color: ColorConfig.bodytext,
                           ),
                           borderRadius: BorderRadius.circular(5)),
                       enabledBorder: new OutlineInputBorder(
                         borderRadius: new BorderRadius.circular(5),
                         borderSide: BorderSide(
-                          color: ColorConfig.primarycolor,
+                          color: ColorConfig.bodytext,
                         ),
                       ),
                     ),
@@ -120,13 +120,12 @@ class _SignInState extends State<SignIn> {
                           ),
                           borderRadius: BorderRadius.circular(5)),
                       focusedBorder: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(color: ColorConfig.primarycolor),
+                          borderSide: BorderSide(color: ColorConfig.bodytext),
                           borderRadius: BorderRadius.circular(5)),
                       enabledBorder: new OutlineInputBorder(
                         borderRadius: new BorderRadius.circular(5),
                         borderSide: BorderSide(
-                          color: ColorConfig.primarycolor,
+                          color: ColorConfig.bodytext,
                         ),
                       ),
                       suffixIcon: IconButton(

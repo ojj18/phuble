@@ -30,7 +30,7 @@ class TextConfig {
   static TextStyle head = TextStyle(
       fontFamily: FontConfig.bold,
       fontSize: Sizeconfig.huge,
-      color: ColorConfig.bodytext);
+      color: ColorConfig.primarycolor);
 
   static TextStyle body = TextStyle(
       fontFamily: FontConfig.regular,
@@ -38,7 +38,7 @@ class TextConfig {
       color: ColorConfig.bodytext);
   static TextStyle body1 = TextStyle(
       fontFamily: FontConfig.regular,
-      fontSize: Sizeconfig.large,
+      fontSize: Sizeconfig.compact,
       color: ColorConfig.bodytext);
   static TextStyle body2 = TextStyle(
       fontFamily: FontConfig.bold,
@@ -50,11 +50,11 @@ class TextConfig {
       color: ColorConfig.bodytext);
   static TextStyle title1 = TextStyle(
       fontFamily: FontConfig.bold,
-      fontSize: Sizeconfig.huge,
+      fontSize: Sizeconfig.higantic,
       color: ColorConfig.bodytext);
   static TextStyle textInput = TextStyle(
       fontFamily: FontConfig.regular,
-      fontSize: Sizeconfig.small,
+      fontSize: Sizeconfig.large,
       color: ColorConfig.bodytext);
   static TextStyle text1 = TextStyle(
       fontFamily: FontConfig.regular,

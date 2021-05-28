@@ -76,11 +76,19 @@ class _SignupStocks extends State<SignupStocks> {
                             itemBuilder: (BuildContext context, int index) {
                               return Padding(
                                 padding: const EdgeInsets.only(top: 10.0),
-                                child: Container(
-                                  child: StockList(
-                                    stock_data: stock_data,
-                                    index: index,
-                                  ),
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      child: StockList(
+                                        stock_data: stock_data,
+                                        index: index,
+                                      ),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Container(
+                                        height: 1,
+                                        color: Colors.grey.withOpacity(0.5)),
+                                  ],
                                 ),
                               );
                             },

@@ -96,13 +96,13 @@ class _SignUpState extends State<SignUp> {
                           borderRadius: BorderRadius.circular(5)),
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: ColorConfig.primarycolor,
+                            color: ColorConfig.bodytext,
                           ),
                           borderRadius: BorderRadius.circular(5)),
                       enabledBorder: new OutlineInputBorder(
                         borderRadius: new BorderRadius.circular(5),
                         borderSide: BorderSide(
-                          color: ColorConfig.primarycolor,
+                          color: ColorConfig.bodytext,
                         ),
                       ),
                     ),
@@ -126,13 +126,13 @@ class _SignUpState extends State<SignUp> {
                           borderRadius: BorderRadius.circular(5)),
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: ColorConfig.primarycolor,
+                            color: ColorConfig.bodytext,
                           ),
                           borderRadius: BorderRadius.circular(5)),
                       enabledBorder: new OutlineInputBorder(
                         borderRadius: new BorderRadius.circular(5),
                         borderSide: BorderSide(
-                          color: ColorConfig.primarycolor,
+                          color: ColorConfig.bodytext,
                         ),
                       ),
                     ),
@@ -151,13 +151,13 @@ class _SignUpState extends State<SignUp> {
                           borderRadius: BorderRadius.circular(5)),
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: ColorConfig.primarycolor,
+                            color: ColorConfig.bodytext,
                           ),
                           borderRadius: BorderRadius.circular(5)),
                       enabledBorder: new OutlineInputBorder(
                         borderRadius: new BorderRadius.circular(5),
                         borderSide: BorderSide(
-                          color: ColorConfig.primarycolor,
+                          color: ColorConfig.bodytext,
                         ),
                       ),
                     ),

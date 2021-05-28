@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:phuble/Screens/SignupStocks/main.dart';
+import 'package:phuble/Screens/SignIn/main.dart';
 import 'package:phuble/Themes/SizeConfig.dart';
 import 'package:phuble/Themes/TypoGraphy.dart';
 
@@ -11,9 +11,9 @@ main() => runApp(
               SizeConfig().init(constraints, orientation);
               return MaterialApp(
                 debugShowCheckedModeBanner: false,
-                home: SignupStocks(),
+                home: SignIn(),
                 theme: ThemeData(
-                  splashColor: ColorConfig.primarycolor,
+                  // splashColor: ColorConfig.primarycolor,
                   accentColor: ColorConfig.primarycolor,
                 ),
               );

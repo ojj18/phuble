@@ -72,7 +72,7 @@ class _SignupProfilepicState extends State<SignupProfilepic> {
                         decoration: BoxDecoration(
                             border: Border.all(
                               width: 2,
-                              color: ColorConfig.primarycolor,
+                              color: ColorConfig.bodytext,
                             ),
                             borderRadius: BorderRadius.circular(5)),
                         height: 100,
